@@ -1,0 +1,25 @@
+# Layer 6: FastAPI backend
+fastapi==0.115.0
+uvicorn==0.30.6
+
+# Layer 6: Groq LLM (llama-3.1)
+groq==0.11.0
+
+# Layer 5: FAISS cluster (ANN / top-k retrieval)
+faiss-cpu==1.8.0
+
+# Layer 5: Sentence embeddings (place vectors)
+sentence-transformers==3.1.1
+
+# Layer 3: Environment configuration
+python-dotenv==1.0.1
+
+# Layer 5: NumPy (embedding operations)
+numpy==1.26.4
+
+# Production extensions (uncomment when scaling):
+redis==5.1.0            # Layer 5: Redis cache + session store
+kafka-python==2.0.2     # Layer 2: Kafka consumer for travel.* topics
+pyspark==3.5.3          # Layer 4: Spark SQL / Streaming / ML / GraphX
+happybase==1.2.0        # Layer 5: HBase client (place metadata)
+boto3==1.35.0           # Layer 3: HDFS/S3 compatible storage
